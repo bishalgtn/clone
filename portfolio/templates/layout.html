@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&icon_names=devices,north_east" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+Hentaigana:wght@800&family=Oleo+Script:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+Hentaigana:wght@800&family=Oleo+Script:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+Hentaigana:wght@800&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <title>
+      {% block title %}
+        Learing Tailwind
+      {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="m-0 p-0 font-Poppins bg-[#242424] text-white min-h-screen">
+    <header>
+      <nav class="flex justify-between flex-row font-bold">
+        <a href="/">
+          <ul class="pl-3 flex flex-row">
+            <li class="p-3">
+              <span class="material-symbols-outlined">devices</span>
+            </li>
+            <li class="p-3 font-[Oleo Script] font-extrabold">Green Tick</li>
+          </ul>
+        </a>
+        <ul class="pr-3 flex flex-row">
+          <li class="p-3">
+            <a href="about/">About</a>
+          </li>
+          <li class="p-3">
+            <a href="followers/">Followers</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      {% block content %}
+
+      {% endblock %}
+    </main>
+    <footer>
+      <div class="bg-[#dee2e6] text-[#000] font-black text-7xl pt-20 pb-20 flex flex-col justify-center items-center">
+        <h1>Want to create something</h1><h1 class="text-[#5e5e5e]">awesome?</h1>
+        <button class="rounded-full bg-[#000] text-[#dee2e6] font-black text-2xl mt-6 p-4">mail@gtn.com.np <span class="material-symbols-outlined">north_east</span></button>
+      </div>
+      <div>
+        <h1 class="font-black text-5xl pl-10 font-Poppins">Green Tick</h1>
+        <p class="font-bold text-2xl pl-10">From strategy to delivery, on time every time</p>
+        <div>
+          <ul class="pl-3 flex flex-row pl-10">
+            <li class="p-3 m-2 rounded-full border-2 border-solid w-1/4 text-center">Youtube</li>
+            <li class="p-3 m-2 rounded-full border-2 border-solid w-1/4 text-center">Facebook</li>
+            <li class="p-3 m-2 rounded-full border-2 border-solid w-1/4 text-center">
+              <a href="">Github</a>
+            </li>
+            <li class="p-3 m-2 rounded-full border-2 border-solid w-1/4 text-center">
+              <a href="">linkedin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-xl pt-10 text-center">©2024</div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block title %}
+  showcase
+{% endblock %}
+
+{% block content %}
+  <div class="flex flex-wrap justify-center">
+    {% for user in display_data %}
+      <div class="max-w-sm bg-[#323131] m-2 border border-[#323131] rounded-lg shadow-sm">
+        <a href="https://github.com/{{ user.name }}"><img class="rounded-t-lg bg-cover bg-center max-h-2xs min-h-2xs max-w-2xs min-w-2xs" src="{{ user.profile_picture }}" alt="{{ user.name }}" /></a>
+        <div class="p-5">
+          <a href="https://github.com/{{ user.name }}"><h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-white">{{ user.name }}</h5></a>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ user.name }} has follow us.</p>
+          <a href="https://github.com/{{ user.name }}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 hover bg-blue-700 focus:ring-blue-800">
+            Click me<svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
